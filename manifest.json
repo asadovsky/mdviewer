@@ -1,0 +1,21 @@
+{
+  "manifest_version": 2,
+  "name": "Markdown Viewer",
+  "version": "0.0.1",
+  "description": "Renders Markdown files (.md, .markdown).",
+  "content_scripts": [{
+    "matches": [
+      "*://*/*.md",
+      "*://*/*.markdown",
+      "file://*/*.md",
+      "file://*/*.markdown"
+    ],
+    "exclude_matches": [
+      "*://*.github.com/*"
+    ],
+    "css": ["markdown-preview.css"],
+    "js": ["marked.min.js", "render.js"],
+    "run_at": "document_end"
+  }],
+  "permissions": ["tabs", "<all_urls>"]
+}
