@@ -1,6 +1,6 @@
-export SHELL := /bin/bash -euo pipefail
-export PATH := $(shell pwd):$(PATH)
-export TMPDIR := $(shell mktemp -d "/tmp/XXXXXX")
+SHELL := /bin/bash -euo pipefail
+PATH := $(shell pwd):$(PATH)
+TMPDIR := $(shell mktemp -d "/tmp/XXXXXX")
 
 # https://www.madboa.com/geek/openssl/#cert-self
 mdviewer.crx:
