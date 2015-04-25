@@ -19,9 +19,9 @@
   padding-top: 70px;
   text-align: center;
 }
-.markdown-preview pre,
 .markdown-preview code,
-.markdown-preview tt {
+.markdown-preview tt,
+.markdown-preview atom-text-editor {
   font-size: 12px;
   font-family: Consolas, "Liberation Mono", Courier, monospace;
 }
@@ -34,6 +34,14 @@
 }
 .markdown-preview ul > li {
   list-style-type: disc;
+}
+.markdown-preview li > atom-text-editor {
+  display: inline-block;
+  vertical-align: top;
+  width: 100%;
+}
+.markdown-preview li:last-child > atom-text-editor {
+  margin-bottom: 0;
 }
 .markdown-preview > *:first-child {
   margin-top: 0 !important;
@@ -140,7 +148,7 @@
 .markdown-preview ol,
 .markdown-preview dl,
 .markdown-preview table,
-.markdown-preview pre {
+.markdown-preview atom-text-editor {
   margin: 15px 0;
 }
 .markdown-preview hr {
@@ -347,18 +355,7 @@
   border-radius: 3px;
   text-shadow: none;
 }
-.markdown-preview code {
-  white-space: nowrap;
-}
-.markdown-preview pre > code {
-  margin: 0;
-  padding: 0;
-  white-space: pre;
-  border: none;
-  background: transparent;
-  word-wrap: normal;
-}
-.markdown-preview pre {
+.markdown-preview atom-text-editor {
   background: #f8f8f8;
   border: 1px solid #ccc;
   font-size: 13px;
@@ -366,17 +363,8 @@
   overflow: auto;
   padding: 6px 10px;
   border-radius: 3px;
-}
-.markdown-preview pre.editor-colors {
   background: #1d1f21;
   border: 1px solid #050606;
-}
-.markdown-preview pre code,
-.markdown-preview pre tt {
-  margin: 0;
-  padding: 0;
-  background-color: transparent;
-  border: none;
 }
 .markdown-preview kbd {
   background-color: #dddddd;

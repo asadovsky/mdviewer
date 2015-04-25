@@ -12,7 +12,7 @@ main() {
   cd $TMP
   echo "Downloading files to ${TMP}"
 
-  curl -L -O https://raw.githubusercontent.com/atom/markdown-preview/master/stylesheets/markdown-preview.less
+  curl -L -O https://raw.githubusercontent.com/atom/markdown-preview/master/styles/markdown-preview.less
   curl -L -O https://raw.githubusercontent.com/atom/template-syntax/master/stylesheets/colors.less
   curl -L -O https://raw.githubusercontent.com/atom/template-syntax/master/stylesheets/syntax-variables.less
 

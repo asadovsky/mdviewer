@@ -11,7 +11,8 @@
       "file://*/*.markdown"
     ],
     "exclude_matches": [
-      "*://*.github.com/*"
+      "*://*.github.com/*",
+      "*://*.githubusercontent.com/*"
     ],
     "css": ["markdown-preview.css"],
     "js": ["marked.min.js", "render.js"],
