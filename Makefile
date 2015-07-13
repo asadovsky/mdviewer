@@ -19,7 +19,7 @@ mdviewer.crx:
 
 .PHONY: clean
 clean:
-	rm -rf node_modules github-markdown.css mdviewer.crx
+	rm -rf node_modules
 
 .PHONY: lint
 lint: node_modules
