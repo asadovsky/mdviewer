@@ -14,8 +14,8 @@
       "*://*.github.com/*",
       "*://*.githubusercontent.com/*"
     ],
-    "css": ["markdown-preview.css"],
-    "js": ["marked.min.js", "render.js"],
+    "css": ["github-markdown.css", "content.css"],
+    "js": ["marked.min.js", "content.js"],
     "run_at": "document_end"
   }],
   "permissions": ["tabs", "<all_urls>"]
