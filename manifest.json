@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
   "name": "Markdown Viewer",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Renders Markdown files (.md, .markdown).",
   "content_scripts": [{
     "matches": [
@@ -15,7 +15,7 @@
       "*://*.githubusercontent.com/*"
     ],
     "css": ["github-markdown.css", "content.css"],
-    "js": ["marked.min.js", "content.js"],
+    "js": ["bundle.min.js"],
     "run_at": "document_end"
   }],
   "permissions": ["tabs", "<all_urls>"]

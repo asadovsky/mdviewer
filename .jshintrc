@@ -24,6 +24,5 @@
   "node": true,
 
   "globals": {
-    "marked": false
   }
 }

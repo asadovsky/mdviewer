@@ -9,17 +9,22 @@ node_modules: package.json
 	npm install
 	touch $@
 
-github-markdown.css: node_modules
-	cp node_modules/github-markdown-css/$@ $@
+dist: content.js node_modules
+	@mkdir -p $@
+	browserify content.js -d -o $@/bundle.min.js
+	cp node_modules/github-markdown-css/github-markdown.css $@
+	cp content.css manifest.json $@
+	touch $@
 
 # https://www.madboa.com/geek/openssl/#cert-self
-mdviewer.crx:
+mdviewer.crx: dist
 	openssl req -x509 -nodes -days 365 -subj '/C=US/ST=California' -newkey rsa:1024 -keyout "$(TMPDIR)/mykey.pem" -out "$(TMPDIR)/mycert.pem"
-	crxmake.sh $(shell pwd) "$(TMPDIR)/mykey.pem"
+	crxmake.sh dist "$(TMPDIR)/mykey.pem"
+	mv dist.crx $@
 
 .PHONY: clean
 clean:
-	rm -rf node_modules
+	rm -rf dist node_modules
 
 .PHONY: lint
 lint: node_modules
