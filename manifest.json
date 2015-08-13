@@ -12,7 +12,8 @@
     ],
     "exclude_matches": [
       "*://*.github.com/*",
-      "*://*.githubusercontent.com/*"
+      "*://*.githubusercontent.com/*",
+      "*://*.googlesource.com/*"
     ],
     "css": ["github-markdown.css", "content.css"],
     "js": ["bundle.min.js"],
