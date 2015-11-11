@@ -13,7 +13,8 @@
     "exclude_matches": [
       "*://*.github.com/*",
       "*://*.githubusercontent.com/*",
-      "*://*.googlesource.com/*"
+      "*://*.googlesource.com/*",
+      "*://*.tensorflow.org/*"
     ],
     "css": ["github-markdown.css", "content.css"],
     "js": ["bundle.min.js"],
