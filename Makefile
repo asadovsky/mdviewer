@@ -9,12 +9,16 @@ node_modules: package.json
 	npm install
 	touch $@
 
-dist: content.js node_modules
+dist: content.css content.js manifest.json node_modules
+	@rm -rf $@
 	@mkdir -p $@
 	browserify content.js -d -o $@/bundle.min.js
 	cp node_modules/github-markdown-css/github-markdown.css $@
 	cp content.css manifest.json $@
 	touch $@
+
+mdviewer.zip: dist
+	zip $@ $</*
 
 # https://www.madboa.com/geek/openssl/#cert-self
 mdviewer.crx: dist
