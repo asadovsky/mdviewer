@@ -1,5 +1,3 @@
-'use strict';
-
 var marked = require('marked');
 
 // TODO: Use prismjs package for syntax highlighting.
