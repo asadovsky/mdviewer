@@ -5,8 +5,7 @@ TMPDIR := $(shell mktemp -d "/tmp/XXXXXX")
 .DELETE_ON_ERROR:
 
 node_modules: package.json
-	npm prune
-	npm install
+	yarn install
 	touch $@
 
 dist: content.css content.js manifest.json node_modules
