@@ -2,11 +2,11 @@
   "name": "mdviewer",
   "version": "0.0.1",
   "dependencies": {
-    "github-markdown-css": "^2.0.9",
-    "marked": "^0.3.3"
+    "github-markdown-css": "^3.0.1",
+    "marked": "^0.6.2"
   },
   "devDependencies": {
-    "browserify": "^10.2.6",
+    "browserify": "^16.2.3",
     "jshint": "^2.8.0"
   },
   "license": "Apache-2.0"
