@@ -1,5 +1,5 @@
 SHELL := /bin/bash -euo pipefail
-PATH := $(shell pwd):node_modules/.bin:$(PATH)
+PATH := node_modules/.bin:$(PATH)
 TMPDIR := $(shell mktemp -d "/tmp/XXXXXX")
 
 .DELETE_ON_ERROR:
@@ -22,7 +22,7 @@ mdviewer.zip: dist
 # https://www.madboa.com/geek/openssl/#cert-self
 mdviewer.crx: dist
 	openssl req -x509 -nodes -days 365 -subj '/C=US/ST=California' -newkey rsa:1024 -keyout "$(TMPDIR)/mykey.pem" -out "$(TMPDIR)/mycert.pem"
-	crxmake.sh dist "$(TMPDIR)/mykey.pem"
+	./crxmake.sh dist "$(TMPDIR)/mykey.pem"
 	mv dist.crx $@
 
 .PHONY: clean
